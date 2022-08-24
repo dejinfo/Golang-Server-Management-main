@@ -1,0 +1,7 @@
+{
+        "user": "postgres",
+        "password":"Sushmitha1959",
+        "host": "database-1.cmhvgmc50vjd.ap-south-1.rds.amazonaws.com",
+        "Port": "5432",
+        "dbname":""  
+} 
