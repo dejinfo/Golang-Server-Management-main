@@ -3,15 +3,15 @@ pipeline {
     stage('build') {
             steps{
             
-            sh 'docker  build'
-            echo 'docker images build'
+            sh 'docker-compose.yml'
+            echo 'docker-compose.yml'
             }
         }
         stage('test') {
             steps{
 
-            sh 'docker build'
-            echo 'docker images build'
+            sh 'docker-compose.yml'
+            echo 'docker-compose.yml'
             }
         }
 
