@@ -1,27 +1,17 @@
 pipeline {
-    agent any
-              triggers {
-                pollSCM '* * * * *'
-            }
-                stages{
-                stage('SCM Checkout') {
+    agent any 
+    stage('build') {
             steps{
-            git branch: 'main',  url: 'https://github.com/dejinfo/jenkins.git'
-            }
-        }
-
-        stage('build') {
-            steps{
-            sh 'ls -lrt'
-            sh 'docker compose build'
+            
+            sh 'docker  build'
             echo 'docker images build'
             }
         }
-        stage('run') {
+        stage('test') {
             steps{
 
-            sh 'docker compose up --build'
-            echo 'running the containers'
+            sh 'docker build'
+            echo 'docker images build'
             }
         }
 
